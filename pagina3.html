@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header>
+        <h3>Desafío 2 - Ejercicio 3</h3>
+    </header>
+
+    <nav>
+        <a href="index.html">Página 1</a> 
+        <span>|</span>
+        <a href="pagina2.html">Página 2</a> 
+        <span>|</span>
+        <a href="pagina3.html">Página 3</a>
+    </nav>
+
+    <main class="main-page3">
+
+        <h3>Ingresa el password</h3>
+
+        <div>
+            <select name="" id="cmb01">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+            <select name="" id="cmb02">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            
+            <select name="" id="cmb03">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>     
+        </div>
+
+        <button onclick="
+
+            let cmb01 = document.querySelector('#cmb01').value;
+            let cmb02 = document.querySelector('#cmb02').value;
+            let cmb03 = document.querySelector('#cmb03').value;
+            let lblSalida = document.querySelector('#lblSalida');
+
+            let contrasena = cmb01 + cmb02 + cmb03;
+           
+            if(contrasena==='911'){
+                lblSalida.innerHTML= 'Password 1 correcto';
+                lblSalida.style.color = 'blue';
+            }
+            else if(contrasena==='714'){
+                lblSalida.innerHTML= 'Password 2 correcto';
+                lblSalida.style.color = 'blue';
+            }
+            else{
+                lblSalida.innerHTML= 'Password incorrecto';
+                lblSalida.style.color = 'red';
+            }
+
+        ">Ingresar</button>
+
+        <p id="lblSalida"></p>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

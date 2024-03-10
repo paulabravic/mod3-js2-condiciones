@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header>
+        <h3>Desafío 2 - Ejercicio 1</h3>
+    </header>
+    
+    <nav>
+        <a href="index.html">Página 1</a> 
+        <span>|</span>
+        <a href="pagina2.html">Página 2</a> 
+        <span>|</span>
+        <a href="pagina3.html">Página 3</a>
+    </nav>
+
+    <main class="main-page1">
+        <img id="imgBorde" src="assets/img/ej01-logo.png" alt="Logo" onclick="
+            let imgBorde = document.querySelector('#imgBorde');
+            if(imgBorde.style.border=='2px solid red'){
+                imgBorde.style.border = '0px solid white';
+            }
+            else{
+                imgBorde.style.border = '2px solid red';
+            }
+            ">
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

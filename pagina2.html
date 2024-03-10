@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <header>
+        <h3>Desafío 2 - Ejercicio 2</h3>
+    </header>
+    
+    <nav>
+        <a href="index.html">Página 1</a> 
+        <span>|</span>
+        <a href="pagina2.html">Página 2</a> 
+        <span>|</span>
+        <a href="pagina3.html">Página 3</a>
+    </nav>
+
+    <main class="main-page2">
+        <p>Puedes llevar hasta 10 stickers en total</p>
+
+        <div class="div-sticker-container">
+            <div class="div-sticker">
+                <img src="assets/img/ej02-sticker01.png" alt="Sticker01" class="img-sticker">
+                <input type="number" id="txt01" value="0">
+            </div>
+            <div class="div-sticker">
+                <img src="assets/img/ej02-sticker02.png" alt="Sticker02" class="img-sticker">
+                <input type="number" id="txt02" value="0">
+            </div>
+            <div class="div-sticker">
+                <img src="assets/img/ej02-sticker03.png" alt="Sticker03" class="img-sticker">
+                <input type="number" id="txt03" value="0">
+            </div>                        
+        </div>
+
+        <p id="lblResultado">Llevas 0 stickers</p>
+
+        <button onclick="
+            let txt01 = document.querySelector('#txt01').value;
+            let txt02 = document.querySelector('#txt02').value;
+            let txt03 = document.querySelector('#txt03').value;
+            let lblResultado = document.querySelector('#lblResultado');
+
+            let suma = Number(txt01) + Number(txt02) + Number(txt03);
+
+            if(suma > 10){
+                lblResultado.innerHTML = 'Llevas demasiados stickers';
+            }
+            else{
+                lblResultado.innerHTML = `Llevas ${suma} stickers`;
+            }
+        ">Verificar</button>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
